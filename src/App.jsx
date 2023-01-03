@@ -22,6 +22,14 @@ import {
   RiLayoutBottomLine,
   RiLayoutColumnLine,
   RiLayoutLeftLine,
+  RiLineHeight,
+  RiTextSpacing,
+  RiAlignLeft,
+  RiAlignCenter,
+  RiAlignRight,
+  RiAlignTop,
+  RiAlignVertically,
+  RiAlignBottom,
 } from "react-icons/ri";
 import { ReactComponent as LogoIcon } from "./assets/images/logo.svg";
 import AvatarProfile from "./assets/images/avatar.png";
@@ -429,9 +437,71 @@ export default function App() {
             </div>
           </Accordion>
 
-          <Accordion title="Typography"></Accordion>
+          <Accordion title="Typography">
+            <div className="grid grid-cols-2 gap-4">
+              <button className="col-span-2 flex items-center justify-between rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+                <input
+                  type="text"
+                  className="bg-transparent text-sm font-semibold outline-none"
+                  defaultValue="Inter"
+                />
+                <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
+              </button>
 
-          <Accordion title="Position"></Accordion>
+              <button className="flex items-center justify-between gap-2 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+                <span className="text-sm font-semibold">Reguler</span>
+                <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
+              </button>
+
+              <button className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+                <input
+                  type="text"
+                  className="w-10 bg-transparent text-sm font-semibold outline-none"
+                  defaultValue="16"
+                />
+                <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
+              </button>
+
+              <div className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+                <RiLineHeight className="h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  className="w-10 bg-transparent text-right text-sm font-semibold outline-none"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+                <RiTextSpacing className="h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  className="w-10 bg-transparent text-right text-sm font-semibold outline-none"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="col-span-2 flex items-center justify-between">
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignLeft className="h-5 w-5 text-gray-400" />
+                </button>
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignCenter className="h-5 w-5 text-gray-400" />
+                </button>
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignRight className="h-5 w-5 text-gray-400" />
+                </button>
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignTop className="h-5 w-5 text-gray-400" />
+                </button>
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignVertically className="h-5 w-5 text-gray-400" />
+                </button>
+                <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                  <RiAlignBottom className="h-5 w-5 text-gray-400" />
+                </button>
+              </div>
+            </div>
+          </Accordion>
 
           <Accordion title="Border"></Accordion>
 
