@@ -328,7 +328,106 @@ export default function App() {
             </div>
           </Accordion>
 
-          <Accordion title="Size"></Accordion>
+          <Accordion title="Size">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">W</span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">H</span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">
+                    Min W
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">
+                    Min H
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">
+                    Max W
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 flex items-center pl-4">
+                  <span className="text-sm font-medium text-gray-400">
+                    Max H
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-16 pr-4 text-right text-sm font-bold text-gray-900"
+                  defaultValue="Auto"
+                />
+              </div>
+
+              <div className="col-span-2">
+                <button className="flex w-full items-center justify-between rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
+                  <span className="text-sm font-medium text-gray-400">
+                    Overflow
+                  </span>
+
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                      <RiEyeLine className="h-5 w-5 text-gray-400" />
+                      <span className="font-semibold">Invisible</span>
+                    </div>
+
+                    <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </Accordion>
 
           <Accordion title="Typography"></Accordion>
 
