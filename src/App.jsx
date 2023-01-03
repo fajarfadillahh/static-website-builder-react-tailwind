@@ -31,9 +31,13 @@ import {
   RiAlignVertically,
   RiAlignBottom,
   RiSipLine,
+  RiMenu2Fill,
 } from "react-icons/ri";
 import { ReactComponent as LogoIcon } from "./assets/images/logo.svg";
 import AvatarProfile from "./assets/images/avatar.png";
+import LogoContent from "./assets/images/logo.png";
+import AlphaImg from "./assets/images/alpha-pay.png";
+import BillyImg from "./assets/images/billy.png";
 
 import Tooltip from "./components/Tooltip";
 import Accordion from "./components/Accordion";
@@ -195,6 +199,75 @@ export default function App() {
             </button>
           </div>
         </header>
+
+        <main className="flex-1 overflow-y-auto p-12">
+          {/* ===== CONTENT SECTION ===== */}
+          <div className="bg-white">
+            <header className="flex items-center justify-between px-12 py-6">
+              <img src={LogoContent} className="h-12 w-12" alt="Logo Content" />
+
+              <div className="flex items-center gap-8">
+                <button className="flex justify-center rounded-full bg-blue-600 py-4 px-12 font-bold text-white">
+                  Hire Us
+                </button>
+                <button>
+                  <RiMenu2Fill className="h-6 w-6 text-gray-400" />
+                </button>
+              </div>
+            </header>
+
+            <section className="py-20 px-12">
+              <h1
+                className="max-w-3xl text-5xl font-bold leading-[1.4]"
+                contentEditable
+              >
+                We craft digital products for business and user goals
+              </h1>
+              <p className="mt-4 text-lg leading-loose text-gray-400">
+                Help find solutiions with UI / UX Designs that are intuitive and
+                in accordance with client business goals. We provide a
+                high-quality service in UI / UX Designs & Development.
+              </p>
+              <div className="mt-6 flex items-center gap-4">
+                <button className="flex justify-center rounded-full bg-blue-600 py-4 px-8 font-bold text-white">
+                  Let's work together
+                </button>
+                <button className="flex justify-center rounded-full border-2 border-gray-200 py-4 px-8 font-bold text-blue-600">
+                  Check our work
+                </button>
+              </div>
+            </section>
+
+            <section className="bg-gray-50 py-20 px-12">
+              <div>
+                <span className="pb-4 font-semibold text-gray-400">
+                  Our Projects
+                </span>
+                <div className="flex items-center justify-between">
+                  <h1 className="text-3xl font-bold">
+                    Our latest cool projects.
+                  </h1>
+                  <button className="flex justify-center rounded-full bg-white py-4 px-8 font-bold text-blue-600">
+                    Let's work together
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-8 pt-12">
+                <img
+                  src={AlphaImg}
+                  className="aspect-square overflow-hidden"
+                  alt="Projecy image"
+                />
+                <img
+                  src={BillyImg}
+                  className="aspect-square overflow-hidden"
+                  alt="Projecy image"
+                />
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
 
       {/* ===== RIGHT MENU SECTION ===== */}
