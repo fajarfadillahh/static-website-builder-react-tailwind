@@ -14,11 +14,20 @@ import {
   RiTabletLine,
   RiSmartphoneLine,
   RiArchiveLine,
+  RiUserLine,
+  RiUploadCloudLine,
+  RiLayoutTopLine,
+  RiLayoutRightLine,
+  RiLayoutRowLine,
+  RiLayoutBottomLine,
+  RiLayoutColumnLine,
+  RiLayoutLeftLine,
 } from "react-icons/ri";
 import { ReactComponent as LogoIcon } from "./assets/images/logo.svg";
 import AvatarProfile from "./assets/images/avatar.png";
 
 import Tooltip from "./components/Tooltip";
+import Accordion from "./components/Accordion";
 
 export default function App() {
   return (
@@ -181,7 +190,69 @@ export default function App() {
 
       {/* ===== RIGHT MENU SECTION ===== */}
       <div className="flex h-screen w-[300px] flex-col border-l border-gray-200 bg-white">
-        rigth menu section
+        <div className="flex h-18 items-center justify-center gap-4 border-b border-gray-200 px-4">
+          <button className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-100 py-2 px-4">
+            <RiUserLine className="h-6 w-6 text-gray-400" />
+            <span className="text-sm font-bold text-gray-900">Invite</span>
+          </button>
+
+          <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-600 py-2 px-4">
+            <RiUploadCloudLine className="h-6 w-6 text-white" />
+            <span className="text-sm font-bold text-white">Publish</span>
+          </button>
+        </div>
+
+        <div className="flex flex-1 flex-col overflow-y-auto">
+          <div className="flex items-center justify-between border-b border-gray-200 p-4">
+            <span className="text-sm font-semibold">Selector</span>
+            <span className="text-sm font-semibold text-gray-400">
+              Inheriting{" "}
+              <span className="font-bold text-gray-900">2 Selector</span>
+            </span>
+          </div>
+
+          <div className="border-b border-gray-200 p-4">
+            <button className="flex w-full items-center justify-between rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
+              <div className="flex items-center gap-2">
+                <span className="rounded-xl bg-white p-2 shadow-sm">
+                  <RiComputerLine className="h-6 w-6 text-blue-600" />
+                </span>
+                <span className="rounded-lg bg-blue-100 py-1 px-3 text-sm font-semibold text-blue-600">
+                  H1 - hero title
+                </span>
+              </div>
+
+              <RiArrowDownSLine className="h-6 w-6 text-gray-400" />
+            </button>
+
+            <div className="mt-2 text-xs font-semibold text-gray-400">
+              1 on this page, 7 on other pages
+            </div>
+          </div>
+
+          <Accordion title="Layout">
+            <div className="flex items-center justify-between">
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutTopLine className="h-5 w-5 text-gray-400" />
+              </button>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutRightLine className="h-5 w-5 text-gray-400" />
+              </button>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutRowLine className="h-5 w-5 text-gray-400" />
+              </button>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutBottomLine className="h-5 w-5 text-gray-400" />
+              </button>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutLeftLine className="h-5 w-5 text-gray-400" />
+              </button>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiLayoutColumnLine className="h-5 w-5 text-gray-400" />
+              </button>
+            </div>
+          </Accordion>
+        </div>
       </div>
     </div>
   );
