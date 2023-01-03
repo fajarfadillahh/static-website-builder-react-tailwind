@@ -18,3 +18,11 @@
   font-weight: 700;
   src: url("../fonts/Gilroy-Bold.ttf") format("truetype");
 }
+
+/* ===== :: -WEBKIT-SCROLLBAR ===== */
+::-webkit-scrollbar {
+  @apply w-2 bg-gray-50;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-100 hover:bg-gray-200;
+}
