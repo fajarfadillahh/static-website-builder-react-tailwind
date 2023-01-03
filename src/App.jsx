@@ -252,6 +252,91 @@ export default function App() {
               </button>
             </div>
           </Accordion>
+
+          <Accordion title="Spacing">
+            <div className="relative flex items-center justify-center rounded-xl border-2 border-dashed border-gray-200 py-10 px-12">
+              <span className="absolute top-2 left-2 text-[10px] font-semibold uppercase text-gray-400">
+                Margin
+              </span>
+
+              <div className="relative w-full">
+                <span className="absolute bottom-2 right-2 text-[10px] font-semibold uppercase text-gray-400">
+                  Padding
+                </span>
+
+                <div className="h-24 w-full rounded-xl border-2 border-blue-600 py-8 px-10">
+                  <div className="h-full w-full rounded-md bg-gray-200"></div>
+                </div>
+
+                {/* Editable Value Spasing */}
+                <div className="absolute inset-x-0 top-0 flex -translate-y-1/2 flex-col items-center justify-center gap-1">
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={20}
+                  />
+                  <div className="h-2 w-2 border-2 border-blue-600 bg-white"></div>
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={0}
+                  />
+                </div>
+
+                <div className="absolute inset-y-0 right-0 flex translate-x-1/2 items-center justify-center gap-1">
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={0}
+                  />
+                  <div className="h-2 w-2 border-2 border-blue-600 bg-white"></div>
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={20}
+                  />
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 flex translate-y-1/2 flex-col items-center justify-center gap-1">
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={0}
+                  />
+                  <div className="h-2 w-2 border-2 border-blue-600 bg-white"></div>
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={20}
+                  />
+                </div>
+
+                <div className="absolute inset-y-0 left-0 flex -translate-x-1/2 items-center justify-center gap-1">
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={20}
+                  />
+                  <div className="h-2 w-2 border-2 border-blue-600 bg-white"></div>
+                  <input
+                    type="text"
+                    className="h-4 w-4 text-center text-sm font-semibold outline-none"
+                    defaultValue={0}
+                  />
+                </div>
+              </div>
+            </div>
+          </Accordion>
+
+          <Accordion title="Size"></Accordion>
+
+          <Accordion title="Typography"></Accordion>
+
+          <Accordion title="Position"></Accordion>
+
+          <Accordion title="Border"></Accordion>
+
+          <Accordion title="Background"></Accordion>
         </div>
       </div>
     </div>
