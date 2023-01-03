@@ -42,6 +42,7 @@ import BillyImg from "./assets/images/billy.png";
 
 import Tooltip from "./components/Tooltip";
 import Accordion from "./components/Accordion";
+import EditElements from "./components/editElements";
 
 export default function App() {
   return (
@@ -218,39 +219,26 @@ export default function App() {
             </header>
 
             <section className="py-20 px-12">
-              <div className="group relative">
-                <div className="pointer-events-none absolute inset-0 left-0 hidden border-2 border-blue-600 group-focus-within:block">
-                  <div className="absolute left-4 flex -translate-y-full items-center gap-2 rounded-t-lg bg-blue-600 py-1 px-3 text-white">
-                    <span className="text-sm">H1 - hero title</span>
-                    <RiPencilFill className="h-5 w-5" />
-                  </div>
-
-                  {/* Dots Indicator */}
-                  <div className="absolute top-0 left-0 h-2 w-2 -translate-x-full -translate-y-full border-2 border-blue-600 bg-white"></div>
-
-                  <div className="absolute top-0 right-0 h-2 w-2 translate-x-full -translate-y-full border-2 border-blue-600 bg-white"></div>
-
-                  <div className="absolute bottom-0 left-0 h-2 w-2 -translate-x-full translate-y-full border-2 border-blue-600 bg-white"></div>
-
-                  <div className="absolute bottom-0 right-0 h-2 w-2 translate-x-full translate-y-full border-2 border-blue-600 bg-white"></div>
-
-                  <div className="absolute top-0 left-1/2 h-2 w-2 -translate-y-1/2 -translate-x-0 border-2 border-blue-600 bg-white"></div>
-
-                  <div className="absolute bottom-0 left-1/2 h-2 w-2 translate-y-1/2 -translate-x-0 border-2 border-blue-600 bg-white"></div>
-                </div>
-
+              <EditElements title="H1 - hero title">
                 <h1
                   className="max-w-3xl text-5xl font-bold leading-[1.4] outline-none"
                   contentEditable
                 >
                   We craft digital products for business and user goals
                 </h1>
-              </div>
-              <p className="mt-4 max-w-3xl text-lg leading-loose text-gray-400">
-                Help find solutiions with UI / UX Designs that are intuitive and
-                in accordance with client business goals. We provide a
-                high-quality service in UI / UX Designs & Development.
-              </p>
+              </EditElements>
+
+              <EditElements title="P - hero text">
+                <p
+                  className="mt-4 max-w-3xl text-lg leading-loose text-gray-400 outline-none"
+                  contentEditable
+                >
+                  Help find solutions with UI / UX Designs that are intuitive
+                  and in accordance with client business goals. We provide a
+                  high-quality service in UI / UX Designs & Development.
+                </p>
+              </EditElements>
+
               <div className="mt-6 flex items-center gap-4">
                 <button className="flex justify-center rounded-full bg-blue-600 py-4 px-8 font-bold text-white">
                   Let's work together
