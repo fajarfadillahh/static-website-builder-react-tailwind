@@ -32,6 +32,7 @@ import {
   RiAlignBottom,
   RiSipLine,
   RiMenu2Fill,
+  RiPencilFill,
 } from "react-icons/ri";
 import { ReactComponent as LogoIcon } from "./assets/images/logo.svg";
 import AvatarProfile from "./assets/images/avatar.png";
@@ -202,7 +203,7 @@ export default function App() {
 
         <main className="flex-1 overflow-y-auto p-12">
           {/* ===== CONTENT SECTION ===== */}
-          <div className="bg-white">
+          <div className="bg-white xl:mx-auto xl:max-w-5xl">
             <header className="flex items-center justify-between px-12 py-6">
               <img src={LogoContent} className="h-12 w-12" alt="Logo Content" />
 
@@ -217,13 +218,35 @@ export default function App() {
             </header>
 
             <section className="py-20 px-12">
-              <h1
-                className="max-w-3xl text-5xl font-bold leading-[1.4]"
-                contentEditable
-              >
-                We craft digital products for business and user goals
-              </h1>
-              <p className="mt-4 text-lg leading-loose text-gray-400">
+              <div className="group relative">
+                <div className="pointer-events-none absolute inset-0 left-0 hidden border-2 border-blue-600 group-focus-within:block">
+                  <div className="absolute left-4 flex -translate-y-full items-center gap-2 rounded-t-lg bg-blue-600 py-1 px-3 text-white">
+                    <span className="text-sm">H1 - hero title</span>
+                    <RiPencilFill className="h-5 w-5" />
+                  </div>
+
+                  {/* Dots Indicator */}
+                  <div className="absolute top-0 left-0 h-2 w-2 -translate-x-full -translate-y-full border-2 border-blue-600 bg-white"></div>
+
+                  <div className="absolute top-0 right-0 h-2 w-2 translate-x-full -translate-y-full border-2 border-blue-600 bg-white"></div>
+
+                  <div className="absolute bottom-0 left-0 h-2 w-2 -translate-x-full translate-y-full border-2 border-blue-600 bg-white"></div>
+
+                  <div className="absolute bottom-0 right-0 h-2 w-2 translate-x-full translate-y-full border-2 border-blue-600 bg-white"></div>
+
+                  <div className="absolute top-0 left-1/2 h-2 w-2 -translate-y-1/2 -translate-x-0 border-2 border-blue-600 bg-white"></div>
+
+                  <div className="absolute bottom-0 left-1/2 h-2 w-2 translate-y-1/2 -translate-x-0 border-2 border-blue-600 bg-white"></div>
+                </div>
+
+                <h1
+                  className="max-w-3xl text-5xl font-bold leading-[1.4] outline-none"
+                  contentEditable
+                >
+                  We craft digital products for business and user goals
+                </h1>
+              </div>
+              <p className="mt-4 max-w-3xl text-lg leading-loose text-gray-400">
                 Help find solutiions with UI / UX Designs that are intuitive and
                 in accordance with client business goals. We provide a
                 high-quality service in UI / UX Designs & Development.
