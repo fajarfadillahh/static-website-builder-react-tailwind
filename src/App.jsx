@@ -30,6 +30,7 @@ import {
   RiAlignTop,
   RiAlignVertically,
   RiAlignBottom,
+  RiSipLine,
 } from "react-icons/ri";
 import { ReactComponent as LogoIcon } from "./assets/images/logo.svg";
 import AvatarProfile from "./assets/images/avatar.png";
@@ -197,7 +198,7 @@ export default function App() {
       </div>
 
       {/* ===== RIGHT MENU SECTION ===== */}
-      <div className="flex h-screen w-[300px] flex-col border-l border-gray-200 bg-white">
+      <div className="flex h-screen w-[300px] flex-col border-l border-gray-200 bg-white pb-18">
         <div className="flex h-18 items-center justify-center gap-4 border-b border-gray-200 px-4">
           <button className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-100 py-2 px-4">
             <RiUserLine className="h-6 w-6 text-gray-400" />
@@ -439,7 +440,7 @@ export default function App() {
 
           <Accordion title="Typography">
             <div className="grid grid-cols-2 gap-4">
-              <button className="col-span-2 flex items-center justify-between rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+              <button className="col-span-2 flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
                 <input
                   type="text"
                   className="bg-transparent text-sm font-semibold outline-none"
@@ -448,12 +449,12 @@ export default function App() {
                 <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
               </button>
 
-              <button className="flex items-center justify-between gap-2 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+              <button className="flex items-center justify-between gap-2 rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
                 <span className="text-sm font-semibold">Reguler</span>
                 <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
               </button>
 
-              <button className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+              <button className="flex items-center justify-between gap-4 rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
                 <input
                   type="text"
                   className="w-10 bg-transparent text-sm font-semibold outline-none"
@@ -462,7 +463,7 @@ export default function App() {
                 <RiArrowDownSLine className="h-5 w-5 text-gray-400" />
               </button>
 
-              <div className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+              <div className="flex items-center justify-between gap-4 rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
                 <RiLineHeight className="h-5 w-5 text-gray-400" />
                 <input
                   type="text"
@@ -471,7 +472,7 @@ export default function App() {
                 />
               </div>
 
-              <div className="flex items-center justify-between gap-4 rounded-xl border-2 border-gray-200 bg-gray-50 py-2 px-4">
+              <div className="flex items-center justify-between gap-4 rounded-xl border border-gray-200 bg-gray-50 py-2 px-4">
                 <RiTextSpacing className="h-5 w-5 text-gray-400" />
                 <input
                   type="text"
@@ -503,9 +504,26 @@ export default function App() {
             </div>
           </Accordion>
 
-          <Accordion title="Border"></Accordion>
+          <Accordion title="Background">
+            <div className="flex items-center justify-between gap-4">
+              <div className="grid w-full grid-cols-[1fr,max-content] divide-x-2 divide-gray-200 rounded-xl border border-gray-200 bg-gray-100 py-2 px-4">
+                <input
+                  type="text"
+                  className="w-20 bg-transparent text-sm font-semibold outline-none"
+                  defaultValue="#D6D6D6"
+                />
+                <input
+                  type="text"
+                  className="w-16 bg-transparent pl-4 text-sm font-semibold outline-none"
+                  defaultValue="100%"
+                />
+              </div>
 
-          <Accordion title="Background"></Accordion>
+              <button className="rounded-xl border border-gray-200 bg-gray-100 p-2 hover:bg-gray-50">
+                <RiSipLine className="h-5 w-5 text-gray-400" />
+              </button>
+            </div>
+          </Accordion>
         </div>
       </div>
     </div>
