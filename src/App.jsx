@@ -42,7 +42,7 @@ import BillyImg from "./assets/images/billy.png";
 
 import Tooltip from "./components/Tooltip";
 import Accordion from "./components/Accordion";
-import EditElements from "./components/editElements";
+import EditElements from "./components/EditElements";
 
 export default function App() {
   return (
